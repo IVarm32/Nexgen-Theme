@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RV1S1XHHW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RV1S1XHHW0');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen Gospel Radio — Live Stream, Shows, Community</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&amp;family=Source+Sans+3:wght@300;400;600;700&amp;display=swap"
+    rel="stylesheet">
+
+  <link rel="preload" as="image"
+    href="https://pub-9492ccf38a894deea61da5ac42572f5f.r2.dev/Nexgen%20Gospel%20Radio%20Logo%20Update.png"
+    fetchpriority="high">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: {
+              DEFAULT: "var(--ink-bg)",
+              deep: "var(--ink-deep)",
+              text: "var(--text)",
+              muted: "var(--text-muted)"
+            },
+            sky: {
+              50: "#F0F9FF",
+              100: "#E0F2FE",
+              500: "#0EA5E9",
+              600: "#0284C7"
+            },
+            gold: {
+              DEFAULT: "#D7B56D",
+              light: "#F1D79A",
+              2: "#F1D79A"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ===== HERO + NOW PLAYING ===== -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="h-full w-full bg-cover bg-center opacity-25 dark:opacity-35"
+        style="background-image: url('assets/images/modern_radio_studio_scene_clo_68a90d3cff53f3d4418d2e3db84fc86f.png'); background-size: cover; background-position: center;">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/80 to-ink"></div>
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 h-[520px] w-[880px] rounded-full blur-3xl opacity-35"
+        style="background: radial-gradient(circle at 30% 30%, rgba(215,181,109,.35), transparent 55%), radial-gradient(circle at 70% 50%, rgba(14, 165, 233, .26), transparent 58%);">
+      </div>
+    </div>
+
+    <!-- Top Nav -->
+    <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 pt-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="group inline-flex items-center gap-3" style="cursor: default;">
+          <div class="h-12 w-auto flex items-center justify-center">
+            <img src="https://pub-9492ccf38a894deea61da5ac42572f5f.r2.dev/Nexgen%20Gospel%20Radio%20Logo%20Update.png"
+              alt="NexGen Gospel Radio Logo" class="h-10 w-auto" fetchpriority="high">
+          </div>
+          <div class="leading-tight hidden sm:block">
+            <div class="display text-[13px] tracking-[-0.02em] font-semibold text-ink-text transition-colors">NexGen
+              Gospel
+              Radio</div>
+            <div class="text-micro text-ink-muted">Live • Uplifting • Community</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm text-ink-muted transition-colors">
+          <a class="hover:text-sky-500 transition" href="#shows" style="cursor: default;">Shows</a>
+          <a class="hover:text-sky-500 transition" href="#mission" style="cursor: default;">Mission</a>
+          <a class="hover:text-sky-500 transition" href="#get-involved" style="cursor: default;">Get involved</a>
+          <a class="hover:text-sky-500 transition" href="#donate" style="cursor: default;">Support</a>
+          <a class="inline-flex items-center gap-2 hover:text-sky-500 transition" href="#footer"
+            style="cursor: default;">
+            Contact <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </nav>
+
+        <button id="openPlayerBtn"
+          class="btn-press hidden sm:flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold text-ink-text bg-gold hover:bg-gold-light gold-glow"><i
+            id="navPlayIcon" class="bi bi-play-circle text-ink-text"></i> <span id="navPlayText"
+            class="text-ink-text">Open player</span>
+        </button>
+        <button id="mobileMenuBtn"
+          class="md:hidden btn-press inline-flex h-9 w-9 items-center justify-center rounded-full glass hairline text-ink-text transition-colors">
+          <i class="bi bi-list text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden mt-4 rounded-3xl glass hairline p-4 transition-colors">
+      <div class="grid gap-2 text-sm text-ink-muted transition-colors">
+        <a class="rounded-2xl px-3 py-2 hover:bg-glass transition transition-colors" href="#shows"
+          style="cursor: default;">Shows</a>
+        <a class="rounded-2xl px-3 py-2 hover:bg-glass transition transition-colors" href="#mission"
+          style="cursor: default;">Mission</a>
+        <a class="rounded-2xl px-3 py-2 hover:bg-glass transition transition-colors" href="#get-involved"
+          style="cursor: default;">Get
+          involved</a>
+        <a class="rounded-2xl px-3 py-2 hover:bg-glass transition transition-colors" href="#donate"
+          style="cursor: default;">Support</a>
+        <a class="rounded-2xl px-3 py-2 hover:bg-glass transition transition-colors" href="#footer"
+          style="cursor: default;">Contact</a>
+      </div>
+    </div>
+    </div>
+    <!-- Hero content -->
+    <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 pt-14 pb-14 md:pt-20 md:pb-18">
+      <div class="grid lg:grid-cols-12 gap-10 items-stretch">
+        <!-- Left: copy + CTAs (same text/colors) -->
+        <div class="lg:col-span-7 flex">
+          <div
+            class="w-full sm:w-full max-w-none rounded-[28px] glass hairline ring-soft p-6 md:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div class="inline-flex items-center gap-3 rounded-full glass hairline px-4 py-2 transition-colors">
+                  <span class="relative inline-flex items-center gap-2 transition-colors">
+                    <span
+                      class="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,.12)]"></span>
+                    <span class="text-micro text-ink-muted transition-colors">Live broadcast</span>
+                  </span>
+                  <span class="h-4 w-px bg-ink-deep transition-colors"></span>
+                  <span class="inline-flex items-center gap-2 text-xs text-ink-muted transition-colors">
+                    <i class="bi bi-wifi text-gold"></i>
+                    <span id="streamQualityLabel" class="text-micro transition-colors">HD • AAC</span>
+                  </span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-3 transition-colors">
+                  <div class="rounded-2xl glass hairline px-4 py-3 transition-colors">
+                    <div class="text-micro text-ink-muted transition-colors">Now playing</div>
+                    <div id="nowPlayingHero" class="mt-1 font-semibold text-ink-text transition-colors">NexGen Live
+                      Stream</div>
+                    <div id="nowArtistHero" class="text-sm text-ink-muted transition-colors">Praise • Talk • Testimony
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h1 class="mt-6 text-4xl md:text-6xl font-semibold leading-[1.05] text-ink-text transition-colors">
+                Your daily <span class="text-sky-500">lift</span>, your late‑night <span
+                  class="text-sky-500">comfort</span>—
+                <br class="hidden md:block">
+                gospel that stays with you.
+              </h1>
+
+              <p class="mt-6 max-w-2xl text-lg text-ink-muted leading-relaxed transition-colors">
+                NexGen Gospel Radio is a live, high‑energy hub for praise, talk, and community moments—streaming
+                faith-forward music and voices around the clock.
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+                <button id="heroPlayBtn"
+                  class="btn-press inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl px-6 py-4 bg-gold text-ink-text font-semibold gold-glow hover:bg-gold-light text-center transition-colors">
+                  <span id="heroPlayIcon"
+                    class="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-ink/10"><i
+                      class="bi bi-play-fill text-2xl"></i></span>
+                  <span class="text-left leading-tight transition-colors">
+                    <span id="heroPlayText" class="block text-base text-ink-text">Play Live</span>
+                    <span class="block text-xs text-ink-muted transition-colors">Tap to join the stream</span>
+                  </span>
+                </button>
+
+                <button id="shareBtn"
+                  class="btn-press inline-flex w-auto items-center justify-center gap-2 rounded-2xl px-5 py-4 glass hairline hover:bg-ink-deep text-ink-text transition-colors">
+                  <i class="bi bi-share"></i>
+                  Share station
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-4">
+              <div class="flex flex-wrap items-center gap-2 text-ink-muted text-sm transition-colors">
+                <span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 glass hairline">
+                  <i class="bi bi-lightning-charge text-gold transition-colors"></i> Instant play
+                </span>
+                <span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 glass hairline">
+                  <i class="bi bi-headphones text-gold transition-colors"></i> Mobile-friendly
+                </span>
+                <span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 glass hairline">
+                  <i class="bi bi-chat-heart text-gold transition-colors"></i> Community-driven
+                </span>
+              </div>
+
+              <div class="mt-1 h-px w-full bg-white/10"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: on-air card (Redesigned darker theme) -->
+        <div class="lg:col-span-5 flex">
+
+
+          <div
+            class="w-full bg-ink-deep rounded-[32px] p-6 border border-glass-border shadow-2xl flex flex-col relative overflow-hidden text-base leading-tight tracking-tighter transition-colors">
+            <!-- Header -->
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <div class="text-[10px] font-bold tracking-[0.2em] text-ink-muted uppercase mb-1">On air</div>
+                <h2 class="text-2xl font-bold text-ink-text tracking-tight transition-colors">NexGen Gospel Radio</h2>
+              </div>
+              <div
+                class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/10">
+                <div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></div>
+                <span class="text-[10px] font-bold tracking-wider text-emerald-400 uppercase">Live</span>
+              </div>
+            </div>
+
+            <!-- Album Art -->
+            <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-6 group bg-black/50">
+              <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style="background-image: url('https://pub-9492ccf38a894deea61da5ac42572f5f.r2.dev/WhatsApp%20Image%202026-01-23%20at%2012.42.52%20PM.jpeg');">
+              </div>
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#16181F]/40 to-transparent"></div>
+            </div>
+
+            <!-- Track Info & Viz -->
+            <div class="flex items-end justify-between mb-6">
+              <div>
+                <div class="text-lg font-bold text-ink-text leading-tight transition-colors">NexGen Live Stream</div>
+                <div class="text-sm text-ink-muted font-medium mt-1 transition-colors">Faith • Hope • Love</div>
+              </div>
+              <!-- Visualizer Bars -->
+              <div class="flex items-end gap-[3px] h-6 opacity-80 pb-1">
+                <div class="w-1 bg-[#D4AF37] h-[40%] rounded-full"></div>
+                <div class="w-1 bg-[#D4AF37] h-[80%] rounded-full"></div>
+                <div class="w-1 bg-[#D4AF37] h-[50%] rounded-full"></div>
+                <div class="w-1 bg-[#D4AF37] h-[90%] rounded-full"></div>
+                <div class="w-1 bg-[#D4AF37] h-[60%] rounded-full"></div>
+                <div class="w-1 bg-[#D4AF37] h-[30%] rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div
+              class="bg-ink rounded-2xl p-3 mb-6 flex items-center gap-4 border border-glass-border transition-colors">
+              <button id="cardPlayBtn"
+                class="flex-none w-12 h-12 rounded-full bg-gold hover:bg-gold-light text-ink font-semibold flex items-center justify-center transition shadow-lg shadow-gold/10 group">
+                <i id="cardPlayIcon"
+                  class="bi bi-play-fill text-2xl ml-1 group-active:scale-95 transition-transform"></i>
+              </button>
+
+              <div class="flex-1 min-w-0 flex flex-col justify-center h-12">
+                <div
+                  class="flex justify-between text-[10px] font-bold tracking-widest text-ink-muted uppercase mb-1.5 transition-colors">
+                  <span>Stream</span>
+                  <span>Live</span>
+                </div>
+                <div class="h-1.5 w-full bg-ink-deep rounded-full overflow-hidden transition-colors">
+                  <div class="h-full w-[45%] bg-gold rounded-full relative transition-colors"></div>
+                </div>
+              </div>
+
+              <button
+                class="flex-none px-4 py-2.5 rounded-xl bg-ink-deep hover:bg-glass text-ink-text text-sm font-medium transition flex items-center gap-2 border border-glass-border active:scale-95 transition-colors">
+                <i class="bi bi-box-arrow-up-right text-xs"></i>
+                <span>Open</span>
+              </button>
+            </div>
+
+            <!-- Ticker -->
+
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-ink rounded-2xl p-3 pb-4 text-center border border-glass-border transition-colors">
+                <div class="text-[9px] font-bold tracking-widest text-ink-muted uppercase mb-1 transition-colors">
+                  Listeners</div>
+                <div id="statListeners" class="text-xl font-bold text-ink-text transition-colors">1,272</div>
+              </div>
+              <div class="bg-ink rounded-2xl p-3 pb-4 text-center border border-glass-border transition-colors">
+                <div class="text-[9px] font-bold tracking-widest text-ink-muted uppercase mb-1">24/7</div>
+                <div class="text-lg font-bold text-ink-text leading-7 transition-colors">Always On</div>
+              </div>
+              <div class="bg-ink rounded-2xl p-3 pb-4 text-center border border-glass-border transition-colors">
+                <div class="text-[9px] font-bold tracking-widest text-ink-muted uppercase mb-1">Vibe</div>
+                <div class="text-lg font-bold text-ink-text leading-7 transition-colors">Uplift</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Visualizer band (full bleed) -->
+    <div class="relative z-10">
+      <div
+        class="w-full border-y border-glass-border bg-gradient-to-r from-transparent via-glass to-transparent transition-colors">
+        <div class="mx-auto max-w-6xl px-6 md:px-10 py-4 flex items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <span class="text-micro text-ink-muted transition-colors">Now Playing</span>
+            <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+            <span id="bandNowPlaying" class="text-ink-text font-semibold transition-colors">NexGen Live Stream</span>
+            <span class="text-ink-muted hidden sm:inline transition-colors">•</span>
+            <span id="bandArtist" class="text-ink-muted hidden sm:inline transition-colors">Praise • Talk •
+              Testimony</span>
+          </div>
+          <div class="hidden md:flex items-center gap-3">
+            <div class="eq" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <span class="text-micro text-ink-muted transition-colors">On air</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== STREAM PLAYER PANEL ===== -->
+  <section id="player" class="relative py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        <div class="lg:col-span-8">
+          <div class="rounded-[24px] glass hairline ring-soft p-5 md:p-7 transition-colors">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="text-micro text-ink-muted transition-colors">Stream player</div>
+                <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-ink-text transition-colors">Listen live in one
+                  tap.</h2>
+              </div>
+              <div
+                class="hidden sm:flex items-center gap-2 rounded-2xl px-3 py-2 bg-ink-deep hairline transition-colors">
+                <i class="bi bi-shield-lock text-gold"></i>
+                <span class="text-sm text-ink-muted">Secure stream</span>
+              </div>
+            </div>
+
+            <div class="mt-6 grid md:grid-cols-5 gap-5 items-center">
+              <div class="md:col-span-2">
+                <div
+                  class="rounded-2xl overflow-hidden bg-ink-deep hairline p-4 flex items-center justify-center transition-colors">
+                  <img
+                    src="https://pub-9492ccf38a894deea61da5ac42572f5f.r2.dev/WhatsApp%20Image%202026-01-23%20at%2012.42.52%20PM.jpeg"
+                    alt="NexGen Gospel Radio artwork" class="h-44 w-auto object-contain">
+                </div>
+              </div>
+
+              <div class="md:col-span-3">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-micro text-ink-muted transition-colors">Now playing</div>
+                    <div id="trackTitle"
+                      class="mt-2 text-xl font-semibold text-ink-text leading-tight transition-colors">NexGen Live
+                      Stream
+                    </div>
+                    <div id="trackArtist" class="mt-1 text-ink-muted transition-colors">Praise • Talk • Testimony</div>
+                  </div><button id="favoriteBtn"
+                    class="btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+                    aria-label="Favorite">
+                    <i id="favoriteIcon" class="bi bi-heart text-ink-text text-lg transition-colors"></i>
+                  </button>
+                </div>
+
+                <div class="mt-6">
+                  <div class="flex items-center justify-between text-xs text-ink-muted transition-colors">
+                    <span class="text-micro">Live</span>
+                    <span class="text-micro">—:—</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-ink-deep overflow-hidden transition-colors">
+                    <div class="h-full w-[78%] bg-gradient-to-r from-gold2 via-gold to-white/40 opacity-85"></div>
+                  </div>
+                  <div class="mt-2 flex items-center justify-between text-xs text-ink-muted/80 transition-colors">
+                    <span>Broadcast is live — progress is indicative</span>
+                    <span id="latency" class="text-ink-muted transition-colors">Low latency</span>
+                  </div>
+                </div>
+
+                <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3"><button id="mainPlayBtn"
+                    class="btn-press inline-flex w-auto items-center justify-center gap-3 rounded-2xl px-5 py-4 bg-gold text-ink font-semibold gold-glow hover:bg-gold-light"><span
+                      class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ink/10">
+                      <i id="mainPlayIcon" class="bi bi-play-fill text-2xl"></i>
+                    </span>
+                    <span class="text-left leading-tight">
+                      <span id="mainPlayText" class="block">Play Live</span>
+                      <span class="block text-xs opacity-70">NexGen Gospel Radio</span>
+                    </span>
+                  </button>
+
+                  <div class="flex-1 rounded-2xl glass hairline px-4 py-3">
+                    <div class="flex items-center justify-between">
+                      <div class="inline-flex items-center gap-2 text-ink-muted transition-colors">
+                        <i class="bi bi-volume-up text-gold"></i>
+                        <span class="text-micro">Volume</span>
+                      </div>
+                      <span id="volPct" class="text-xs text-ink-muted transition-colors">75%</span>
+                    </div>
+                    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.75" class="mt-3 w-full">
+                  </div>
+                </div>
+
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <button id="muteBtn"
+                    class="btn-press inline-flex items-center gap-2 rounded-2xl px-4 py-2 glass hairline hover:bg-glass text-sm text-ink-text transition-colors">
+                    <i id="muteIcon" class="bi bi-volume-mute"></i> Mute
+                  </button>
+                  <button id="copyLinkBtn"
+                    class="btn-press inline-flex items-center gap-2 rounded-2xl px-4 py-2 glass hairline hover:bg-glass text-sm text-ink-text transition-colors">
+                    <i class="bi bi-link-45deg"></i> Copy share link
+                  </button>
+                  <span id="toast"
+                    class="text-sm text-emerald-500 rounded-2xl px-3 py-2 bg-emerald-500/10 hairline hidden">Stream
+                    error—check your URL and format.</span>
+                </div>
+
+              </div>
+            </div>
+
+            <audio id="audio" preload="none" crossorigin="anonymous"
+              src="https://zeno.fm/player/nexgen-gospel-ja"></audio>
+          </div>
+        </div>
+
+        <aside class="lg:col-span-4 transition-colors">
+          <div class="rounded-[24px] glass hairline ring-soft p-5 md:p-7 h-full">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="text-micro text-ink-muted transition-colors">Stream options</div>
+                <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Choose your quality.</h3>
+                <p class="mt-2 text-ink-muted leading-relaxed transition-colors">
+                  Switch between stable and high‑fidelity streams anytime.
+                </p>
+              </div>
+              <div
+                class="h-10 w-10 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                <i class="bi bi-sliders2 text-gold"></i>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-3">
+              <button data-stream="hd-aac"
+                class="streamBtn hover-lift rounded-2xl p-4 bg-ink-deep hairline text-left bg-ink-deep gold-glow transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="font-semibold text-ink-text transition-colors">HD</div>
+                  <span class="text-micro text-ink-muted transition-colors">AAC</span>
+                </div>
+                <div class="mt-1 text-sm text-ink-muted transition-colors">Best quality • Recommended on Wi‑Fi</div>
+              </button>
+
+              <button data-stream="standard-mp3"
+                class="streamBtn hover-lift rounded-2xl p-4 bg-ink hairline text-left transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="font-semibold text-ink-text transition-colors">Standard</div>
+                  <span class="text-micro text-ink-muted transition-colors">MP3</span>
+                </div>
+                <div class="mt-1 text-sm text-ink-muted transition-colors">Balanced • Great on mobile</div>
+              </button>
+
+              <button data-stream="data-saver"
+                class="streamBtn hover-lift rounded-2xl p-4 bg-ink hairline text-left transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="font-semibold text-ink-text transition-colors">Data Saver</div>
+                  <span class="text-micro text-ink-muted transition-colors">AAC+</span>
+                </div>
+                <div class="mt-1 text-sm text-ink-muted transition-colors">Low data • Strong in weak signal</div>
+              </button>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-ink hairline p-4 transition-colors">
+              <div class="flex items-center justify-between">
+                <div class="text-micro text-ink-muted transition-colors">Open in app</div>
+                <div class="flex items-center gap-2 text-ink-muted/80">
+                  <i class="bi bi-phone"></i>
+                  <i class="bi bi-tablet"></i>
+                  <i class="bi bi-laptop"></i>
+                </div>
+              </div>
+              <p class="mt-2 text-sm text-ink-muted transition-colors">
+                Prefer a dedicated player? Open the stream in your favorite app.
+              </p>
+              <button id="openInAppBtn"
+                class="mt-4 btn-press inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors">
+                <i class="bi bi-box-arrow-up-right text-gold"></i>
+                Open stream URL
+              </button>
+              <div class="mt-3 text-xs text-ink-muted/60 transition-colors">
+                Tip: You can paste the URL into VLC, iTunes, or your car stereo app.
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE HIGHLIGHTS ===== -->
+  <section id="shows" class="py-16 md:py-24 transition-colors">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <div class="text-micro text-ink-muted transition-colors">Schedule highlights</div>
+          <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-ink-text transition-colors">Shows built for real life.
+          </h2>
+          <p class="mt-3 max-w-2xl text-lg text-ink-muted leading-relaxed transition-colors">
+            A rotation of praise, conversations, and youth-forward energy—so you can tune in whenever you need it.
+          </p>
+        </div>
+        <button
+          class="btn-press inline-flex items-center gap-2 rounded-2xl px-5 py-3 glass hairline hover:bg-glass text-ink-text transition-colors">
+          <i class="bi bi-calendar3 text-gold"></i>
+          View full schedule
+        </button>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/portrait_of_a_friendly_radio_h_9df36c81d94542313c6d3bd62b03e480.png"
+              alt="Morning Praise host portrait" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-micro text-ink-muted transition-colors">Mon–Fri • 6:00 AM</div>
+            <span class="text-micro text-gold">Praise</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Morning Praise Lift</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">High-energy worship and quick encouragement
+            to start strong.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Worship</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Motivation</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Commute</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="Morning Praise Lift" data-time="Weekdays 6:00 AM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/modern_talk_radio_setup_broad_455b4ed17d0d998e09b702f28e3257c3.png"
+              alt="Midday Talk themed microphone graphic" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-micro text-ink-muted transition-colors">Mon–Fri • 12:00 PM</div>
+            <span class="text-micro text-gold">Talk</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Faith in Focus</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Real conversations, interviews, and practical
+            faith for today.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Interviews</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Stories</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Community</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="Faith in Focus" data-time="Weekdays 12:00 PM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/youth_gospel_night_scene_smal_b07310857f725eb2ce39d6cddb632b83.png"
+              alt="Youth Night themed graphic" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-micro text-ink-muted transition-colors">Fri • 8:00 PM</div>
+            <span class="text-micro text-gold">Youth</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">NexGen Friday Night</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Fresh gospel, positive energy, and listener
+            shout‑outs.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 transition-colors">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Requests</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Shout-outs</span>
+            <span class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">New
+              Music</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="NexGen Friday Night" data-time="Fridays 8:00 PM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/church_sanctuary_interior_gos_131c997ba292b6c5e507f59a4b6890bd.png"
+              alt="Sunday choir image" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between transition-colors">
+            <div class="text-micro text-ink-muted transition-colors">Sun • 9:00 AM</div>
+            <span class="text-micro text-gold">Praise</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Sunday Praise Special</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">An extended set of worship, classics, and new
+            releases.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 transition-colors">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Choir</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Classics</span>
+            <span class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Live
+              set</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="Sunday Praise Special" data-time="Sundays 9:00 AM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/candlelight_prayer_scene_clos_91c2f1de43992b00aed76ece2ba9e23e.png"
+              alt="Prayer moment candlelight scene" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between transition-colors">
+            <div class="text-micro text-ink-muted transition-colors">Daily • 9:30 PM</div>
+            <span class="text-micro text-gold">Prayer</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Night Prayer &amp; Peace</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">A calm close to your day—prayers,
+            reflections, and gentle music.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2 transition-colors">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Reflection</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Peace</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Hope</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="Night Prayer &amp; Peace" data-time="Daily 9:30 PM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="hover-lift rounded-[22px] glass hairline p-5 transition-colors">
+          <div class="rounded-2xl overflow-hidden bg-ink-deep hairline transition-colors">
+            <img src="assets/images/community_testimony_night_per_5d502e419740ec7aa9d5fd5a78d33ba7.png"
+              alt="Audience testimony theme" class="h-44 w-full object-cover">
+          </div>
+          <div class="mt-4 flex items-center justify-between transition-colors">
+            <div class="text-micro text-ink-muted transition-colors">Sat • 3:00 PM</div>
+            <span class="text-micro text-gold">Talk</span>
+          </div>
+          <h3 class="mt-2 text-xl font-semibold text-ink-text transition-colors">Testimony Line</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Listener stories and breakthroughs—your voice
+            is welcome here.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2 transition-colors">
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Call-ins</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Stories</span>
+            <span
+              class="text-xs text-ink-muted rounded-full px-3 py-1 bg-ink-deep hairline transition-colors">Encouragement</span>
+          </div>
+
+          <div class="mt-5 flex gap-2">
+            <button
+              class="reminderBtn btn-press flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink font-semibold hover:bg-gold-light gold-glow transition-colors"
+              data-show="Testimony Line" data-time="Saturdays 3:00 PM">
+              <i class="bi bi-bell"></i> Set Reminder
+            </button><button
+              class="listenLiveBtn btn-press inline-flex items-center justify-center h-9 w-9 rounded-full glass hairline hover:bg-glass transition-colors"
+              aria-label="Listen Live">
+              <i class="bi bi-play-fill text-ink-text text-xl transition-colors"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATION MISSION ===== -->
+  <section id="mission" class="py-16 md:py-24 transition-colors">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <div class="text-micro text-ink-muted transition-colors">Station mission</div>
+          <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-ink-text transition-colors">A station that feels like
+            family.</h2>
+
+          <div class="mt-5 max-w-3xl text-lg text-ink-muted leading-relaxed transition-colors">
+            NexGen Gospel Radio exists to amplify hope—through music that lifts, conversations that heal, and a
+            community that shows up.
+            Whether you’re driving, studying, working, or winding down, we’re here to keep faith within reach.
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-2 gap-4 max-w-3xl">
+            <div class="rounded-2xl glass hairline p-4 transition-colors">
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-10 w-10 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                  <i class="bi bi-heart-pulse text-gold"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-ink-text transition-colors">Encouragement first</div>
+                  <div class="text-sm text-ink-muted transition-colors">Every segment is built to uplift.</div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl glass hairline p-4 transition-colors">
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-10 w-10 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                  <i class="bi bi-mic text-gold"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-ink-text transition-colors">Voices that connect</div>
+                  <div class="text-sm text-ink-muted transition-colors">Hosts and guests with real stories.</div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl glass hairline p-4 transition-colors">
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-10 w-10 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                  <i class="bi bi-people text-gold"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-ink-text transition-colors">Community-driven</div>
+                  <div class="text-sm text-ink-muted transition-colors">Requests, prayers, shout‑outs.</div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl glass hairline p-4 transition-colors">
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-10 w-10 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                  <i class="bi bi-broadcast text-gold"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-ink-text transition-colors">Always accessible</div>
+                  <div class="text-sm text-ink-muted transition-colors">Designed for phone, tablet, and desktop.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <a href="#footer" class="inline-flex items-center gap-2 text-gold hover:text-gold2 transition font-semibold"
+              style="cursor: default;">
+              Meet the Team <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="gradient-border rounded-[22px]">
+            <div class="rounded-[20px] overflow-hidden glass hairline transition-colors">
+              <img src="assets/images/behind_the_scenes_in_a_modern_feaaa7e587babf311cc5c56e79b6c357.png"
+                alt="Community choir and studio scene" class="h-[380px] w-full object-cover">
+              <div class="p-5 md:p-6 bg-glass transition-colors">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="text-micro text-ink-muted transition-colors">Built for</div>
+                    <div class="mt-1 font-semibold text-ink-text transition-colors">Listeners who need light.</div>
+                    <div class="mt-1 text-ink-muted text-sm transition-colors">Tune in • connect • share hope.</div>
+                  </div>
+                  <div
+                    class="h-11 w-11 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                    <i class="bi bi-stars text-gold"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GET INVOLVED ===== -->
+  <section id="get-involved" class="py-16 md:py-24 transition-colors">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 transition-colors">
+        <div>
+          <div class="text-micro text-ink-muted transition-colors">Get involved</div>
+          <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-ink-text transition-colors">This is your station too.
+          </h2>
+          <p class="mt-3 max-w-2xl text-lg text-ink-muted leading-relaxed transition-colors">
+            Make a request, submit a prayer, or partner with us to reach more hearts.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl glass hairline px-4 py-3 text-sm text-ink-muted inline-flex items-center gap-2 transition-colors">
+          <i class="bi bi-clock text-gold"></i> Replies typically within 24–48 hours
+        </div>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6 transition-colors">
+        <div class="hover-lift rounded-[22px] glass hairline p-6 transition-colors">
+          <div class="flex items-start justify-between">
+            <div class="h-12 w-12 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+              <i class="bi bi-music-note-list text-gold text-xl"></i>
+            </div>
+            <span class="text-micro text-ink-muted transition-colors">Requests</span>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold text-ink-text transition-colors">Request a Song</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Tell us what you’re feeling and what you want
+            to hear.</p>
+          <button
+            class="openModal btn-press mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink-text font-semibold hover:bg-gold-light gold-glow transition-colors"
+            data-modal="songModal">
+            <i class="bi bi-pencil-square text-ink-text"></i> <span class="text-ink-text">Start a request</span>
+          </button>
+          <div class="mt-3 text-xs text-ink-muted/50 transition-colors">We may feature your message on-air.</div>
+        </div>
+
+        <div class="hover-lift rounded-[22px] glass hairline p-6 transition-colors">
+          <div class="flex items-start justify-between">
+            <div class="h-12 w-12 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+              <i class="bi bi-chat-heart text-gold text-xl"></i>
+            </div>
+            <span class="text-micro text-ink-muted transition-colors">Prayer</span>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold text-ink-text transition-colors">Submit a Prayer</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Share a need—our team will lift you up in
+            prayer.</p>
+          <button
+            class="openModal btn-press mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-gold text-ink-text font-semibold hover:bg-gold-light gold-glow transition-colors"
+            data-modal="prayerModal">
+            <i class="bi bi-send text-ink-text"></i> <span class="text-ink-text">Send a prayer</span>
+          </button>
+          <div class="mt-3 text-xs text-ink-muted/50 transition-colors">Optional: keep it anonymous.</div>
+        </div>
+
+        <div class="hover-lift rounded-[22px] glass hairline p-6 transition-colors">
+          <div class="flex items-start justify-between">
+            <div class="h-12 w-12 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+              <i class="bi bi-briefcase text-gold text-xl"></i>
+            </div>
+            <span class="text-micro text-ink-muted transition-colors">Partner</span>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold text-ink-text transition-colors">Advertise / Partner</h3>
+          <p class="mt-2 text-ink-muted leading-relaxed transition-colors">Let’s build something meaningful—sponsorships
+            and
+            collaborations.</p>
+          <button
+            class="openModal btn-press mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors"
+            data-modal="partnerModal">
+            <i class="bi bi-envelope"></i> Contact partnerships
+          </button>
+          <div class="mt-3 text-xs text-ink-muted/50 transition-colors">We’ll send a simple media kit.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DONATE & SUPPORT ===== -->
+  <section id="donate" class="py-16 md:py-24 transition-colors">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="rounded-[28px] overflow-hidden ring-soft transition-colors">
+        <div class="relative">
+          <div class="h-40 md:h-48 w-full bg-cover bg-center transition-colors"
+            style="background-image: url('assets/images/concert_stage_lighting_backgro_780e7cad67503539b42b8660936f6e4b.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-r from-ink-bg/85 via-ink-bg/55 to-ink-bg/85 transition-colors">
+          </div>
+          <div class="absolute inset-0 opacity-35 transition-colors"
+            style="background: radial-gradient(circle at 25% 40%, var(--gold), transparent 55%), radial-gradient(circle at 75% 60%, var(--primary), transparent 60%);">
+          </div>
+
+          <div class="relative px-6 md:px-10 py-10 md:py-12 transition-colors">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="text-micro text-ink-muted transition-colors">Donate &amp; support</div>
+                <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-ink-text transition-colors">Keep the signal
+                  strong.</h2>
+                <p class="mt-3 max-w-2xl text-lg text-ink-muted leading-relaxed transition-colors">
+                  Your support helps us stream 24/7, uplift communities, and create more moments that matter.
+                </p>
+
+                <div class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl transition-colors">
+                  <div class="rounded-2xl bg-ink hairline p-4 transition-colors">
+                    <div class="flex items-center gap-3">
+                      <i class="bi bi-broadcast-pin text-gold text-lg"></i>
+                      <div>
+                        <div class="font-semibold text-ink-text transition-colors">Reliable streaming</div>
+                        <div class="text-sm text-ink-muted transition-colors">Better uptime and audio quality.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl bg-ink hairline p-4 transition-colors">
+                    <div class="flex items-center gap-3">
+                      <i class="bi bi-people text-gold text-lg"></i>
+                      <div>
+                        <div class="font-semibold text-ink-text transition-colors">Community outreach</div>
+                        <div class="text-sm text-ink-muted transition-colors">Events, prayer lines, and support.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl bg-ink hairline p-4 transition-colors">
+                    <div class="flex items-center gap-3">
+                      <i class="bi bi-mic text-gold text-lg"></i>
+                      <div>
+                        <div class="font-semibold text-ink-text transition-colors">More programming</div>
+                        <div class="text-sm text-ink-muted transition-colors">New hosts and guest features.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl bg-ink hairline p-4 transition-colors">
+                    <div class="flex items-center gap-3">
+                      <i class="bi bi-shield-lock text-gold text-lg"></i>
+                      <div>
+                        <div class="font-semibold text-ink-text transition-colors">Secure giving</div>
+                        <div class="text-sm text-ink-muted transition-colors">Protected payments &amp; privacy.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5">
+                <div class="rounded-[22px] glass hairline p-6 md:p-7">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <div class="text-micro text-ink-muted transition-colors">Give</div>
+                      <div class="mt-1 text-xl font-semibold text-ink-text transition-colors">Choose an amount</div>
+                      <div class="mt-2 text-ink-muted text-sm transition-colors">One-time gifts keep NexGen on the air.
+                      </div>
+                    </div>
+                    <div
+                      class="h-11 w-11 rounded-2xl bg-ink-deep hairline flex items-center justify-center transition-colors">
+                      <i class="bi bi-gift text-gold"></i>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 transition-colors">
+                    <button
+                      class="donateAmt btn-press rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors"
+                      data-amt="10">$10</button>
+                    <button
+                      class="donateAmt btn-press rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors"
+                      data-amt="25">$25</button>
+                    <button
+                      class="donateAmt btn-press rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors"
+                      data-amt="50">$50</button>
+                    <button
+                      class="donateAmt btn-press rounded-2xl px-4 py-3 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors"
+                      data-amt="100">$100</button>
+                  </div>
+
+                  <div class="mt-4 rounded-2xl bg-ink-deep hairline p-4 transition-colors">
+                    <label class="text-micro text-ink-muted transition-colors">Custom amount</label>
+                    <div class="mt-2 flex items-center gap-2">
+                      <span
+                        class="inline-flex items-center justify-center h-11 w-11 rounded-2xl bg-ink/10 hairline text-ink-text transition-colors">$</span>
+                      <input id="customAmt" type="number" min="1" placeholder="Enter amount"
+                        class="h-11 w-full rounded-2xl bg-ink/10 hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-gold/40 transition-colors">
+                    </div>
+                  </div>
+
+                  <button id="donateBtn"
+                    class="btn-press mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-4 bg-gold text-ink-text font-semibold hover:bg-gold-light gold-glow transition-colors">
+                    <i class="bi bi-lock-fill"></i> Donate securely
+                  </button>
+
+                  <div class="mt-3 text-xs text-ink-muted transition-colors flex items-center gap-2">
+                    <i class="bi bi-shield-check text-gold"></i>
+                    Payments handled by your chosen provider (Stripe/PayPal integration placeholder).
+                  </div>
+
+                  <div id="donateNote"
+                    class="hidden mt-3 text-sm text-emerald-200 bg-emerald-500/10 hairline rounded-2xl px-4 py-3">
+                    Thanks! Donation intent created (demo).
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER LINKS ===== -->
+  <footer id="footer" class="relative mt-10 transition-colors">
+    <div class="absolute inset-0">
+      <div class="h-full w-full bg-slate-500/5 transition-colors"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-6 md:px-10 py-14 md:py-16">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-4 transition-colors">
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl glass hairline flex items-center justify-center transition-colors">
+              <i class="bi bi-broadcast-pin text-gold text-lg"></i>
+            </div>
+            <div>
+              <div class="display text-lg font-semibold text-ink-text transition-colors">NexGen Gospel Radio</div>
+              <div class="text-micro text-ink-muted transition-colors">Live broadcast hub</div>
+            </div>
+          </div>
+
+          <p class="mt-4 text-ink-muted leading-relaxed max-w-sm transition-colors">
+            A modern gospel station built for the next generation—rooted in faith, powered by community.
+          </p>
+
+          <div class="mt-5 flex items-center gap-3 transition-colors">
+            <a class="btn-press inline-flex h-11 w-11 items-center justify-center rounded-2xl glass hairline hover:bg-glass"
+              href="#" aria-label="Facebook" style="cursor: default;">
+              <i class="bi bi-facebook text-ink-muted transition-colors"></i>
+            </a>
+            <a class="btn-press inline-flex h-11 w-11 items-center justify-center rounded-2xl glass hairline hover:bg-glass"
+              href="#" aria-label="Instagram" style="cursor: default;">
+              <i class="bi bi-instagram text-ink-muted transition-colors"></i>
+            </a>
+            <a class="btn-press inline-flex h-11 w-11 items-center justify-center rounded-2xl glass hairline hover:bg-glass"
+              href="#" aria-label="YouTube" style="cursor: default;">
+              <i class="bi bi-youtube text-ink-muted transition-colors"></i>
+            </a>
+            <a class="btn-press inline-flex h-11 w-11 items-center justify-center rounded-2xl glass hairline hover:bg-glass"
+              href="#" aria-label="X" style="cursor: default;">
+              <i class="bi bi-twitter-x text-ink-muted transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 transition-colors">
+          <div class="text-micro text-ink-muted transition-colors">Navigation</div>
+          <div class="mt-4 grid gap-2 text-sm text-ink-muted">
+            <a href="#player" class="hover:text-ink-text transition transition-colors" style="cursor: default;">Listen
+              live</a>
+            <a href="#shows" class="hover:text-ink-text transition transition-colors" style="cursor: default;">Shows</a>
+            <a href="#mission" class="hover:text-ink-text transition transition-colors"
+              style="cursor: default;">Mission</a>
+            <a href="#get-involved" class="hover:text-ink-text transition transition-colors"
+              style="cursor: default;">Get involved</a>
+            <a href="#donate" class="hover:text-ink-text transition transition-colors"
+              style="cursor: default;">Support</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 transition-colors">
+          <div class="text-micro text-ink-muted transition-colors">Newsletter</div>
+          <h3 class="mt-3 text-xl font-semibold text-ink-text transition-colors">Get updates and special broadcasts.
+          </h3>
+          <p class="mt-2 text-ink-muted transition-colors">No spam. Just new shows, community moments, and station news.
+          </p>
+
+          <form id="newsletterForm" class="mt-5 flex flex-col sm:flex-row gap-3 transition-colors">
+            <input id="email" type="email" required="" placeholder="Email address"
+              class="h-11 w-full rounded-2xl bg-ink hairline px-4 text-sm text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-gold/40 transition-colors">
+            <button
+              class="btn-press h-11 shrink-0 rounded-2xl px-6 bg-gold text-ink-text font-semibold hover:bg-gold-light gold-glow inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors">
+              <i class="bi bi-envelope-paper text-ink-text"></i> Subscribe
+            </button>
+          </form>
+
+          <div id="newsletterThanks"
+            class="hidden mt-4 rounded-2xl bg-emerald-500/10 hairline px-4 py-3 text-emerald-500 text-sm transition-colors">
+            You’re subscribed (demo). Welcome to NexGen.
+          </div>
+
+          <div class="mt-8 rounded-2xl bg-ink hairline p-4 transition-colors">
+            <div class="grid sm:grid-cols-2 gap-4 text-sm text-ink-muted transition-colors">
+              <div class="flex items-start gap-3">
+                <i class="bi bi-envelope text-gold mt-0.5"></i>
+                <div>
+                  <div class="text-micro text-ink-muted transition-colors">Email</div>
+                  <a href="mailto:vj@nexgengospelradio.com" class="hover:text-ink-text transition transition-colors"
+                    style="cursor: default;">vj@nexgengospelradio.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="bi bi-telephone text-gold mt-0.5"></i>
+                <div>
+                  <div class="text-micro text-ink-muted transition-colors">Phone</div>
+                  <a href="tel:+18768209478" class="hover:text-ink-text transition transition-colors"
+                    style="cursor: default;">+1 (876)
+                    820‑9478</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div
+        class="mt-12 pt-8 border-t border-ink-deep flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-ink-muted transition-colors">
+        <div>© <span id="year">2026</span> NexGen Gospel Radio. All rights reserved.</div>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 transition-colors">
+          <a href="#" class="hover:text-ink-text transition transition-colors" style="cursor: default;">Privacy</a>
+          <a href="#" class="hover:text-ink-text transition transition-colors" style="cursor: default;">Terms</a>
+          <a href="#" class="hover:text-ink-text transition transition-colors" style="cursor: default;">FCC / Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODALS ===== -->
+  <div id="modalOverlay" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+    <div class="relative mx-auto max-w-2xl px-6 md:px-10 py-10">
+      <div id="modalContainer" class="rounded-[24px] glass hairline ring-soft overflow-hidden">
+        <div class="flex items-center justify-between px-6 py-5 border-b border-ink-deep transition-colors">
+          <div>
+            <div id="modalKicker" class="text-micro text-ink-muted transition-colors">Get involved</div>
+            <div id="modalTitle" class="mt-1 text-xl font-semibold text-ink-text transition-colors">Modal</div>
+          </div><button id="closeModal"
+            class="btn-press inline-flex h-9 w-9 items-center justify-center rounded-full glass hairline hover:bg-glass transition-colors"
+            aria-label="Close">
+            <i class="bi bi-x-lg text-ink-muted transition-colors"></i>
+          </button>
+        </div>
+
+        <div id="modalBody" class="p-6">
+          <!-- injected -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Demo stream URLs (replace with real station URLs)
+    const STREAMS = {
+      "hd-aac": {
+        label: "HD • AAC",
+        url: "https://usa20.fastcast4u.com:5040/;?type=http&nocache=1769188806"
+      },
+      "standard-mp3": {
+        label: "Standard • MP3",
+        url: "https://usa20.fastcast4u.com:5040/;?type=http&nocache=1769188806"
+      },
+      "data-saver": {
+        label: "Data Saver • AAC+",
+        url: "https://usa20.fastcast4u.com:5040/;?type=http&nocache=1769188806"
+      }
+    };
+    const audio = document.getElementById("audio");
+    const heroPlayBtn = document.getElementById("heroPlayBtn");
+    const cardPlayBtn = document.getElementById("cardPlayBtn");
+    const mainPlayBtn = document.getElementById("mainPlayBtn");
+    const openPlayerBtn = document.getElementById("openPlayerBtn");
+
+    const heroPlayText = document.getElementById("heroPlayText");
+    const heroPlayIcon = document.getElementById("heroPlayIcon");
+    const mainPlayText = document.getElementById("mainPlayText");
+    const mainPlayIcon = document.getElementById("mainPlayIcon");
+    const cardPlayIcon = document.getElementById("cardPlayIcon");
+
+    const streamQualityLabel = document.getElementById("streamQualityLabel");
+
+    let currentStreamKey = "hd-aac";
+    let isMuted = false;
+
+    // Set a default stream URL on the audio element
+    function setStream(key) {
+      currentStreamKey = key;
+      streamQualityLabel.textContent = STREAMS[key].label.toUpperCase();
+
+      // Update UI "selected"
+      document.querySelectorAll(".streamBtn").forEach(btn => {
+        const active = btn.getAttribute("data-stream") === key;
+        btn.classList.toggle("bg-ink", active);
+        btn.classList.toggle("gold-glow", active);
+      });
+
+      const url = STREAMS[key].url;
+      audio.src = url || "";
+      audio.load();
+    }
+
+    function updatePlayUI(isPlaying) {
+      const playIcon = '<i class="bi bi-play-fill text-2xl"></i>';
+      const pauseIcon = '<i class="bi bi-pause-fill text-2xl"></i>';
+
+      heroPlayText.textContent = isPlaying ? "Pause" : "Play Live";
+      mainPlayText.textContent = isPlaying ? "Pause" : "Play Live";
+      if (cardPlayIcon) cardPlayIcon.className = isPlaying ? "bi bi-pause-fill text-2xl ml-1 group-active:scale-95 transition-transform" : "bi bi-play-fill text-2xl ml-1 group-active:scale-95 transition-transform";
+      heroPlayIcon.innerHTML = isPlaying ? pauseIcon : playIcon;
+      mainPlayIcon.className = isPlaying ? "bi bi-pause-fill text-2xl" : "bi bi-play-fill text-2xl";
+    }
+
+    async function togglePlay() {
+      const url = STREAMS[currentStreamKey].url;
+      if (!url) {
+        showToast("Add your stream URL to enable playback.");
+        return;
+      }
+
+      try {
+        if (audio.paused) {
+          // Some browsers require calling load() before play() when changing src.
+          if (audio.src !== url) {
+            audio.src = url;
+            audio.load();
+          }
+          await audio.play();
+          updatePlayUI(true);
+        } else {
+          audio.pause();
+          updatePlayUI(false);
+        }
+      } catch (e) {
+        showToast("Playback blocked—tap again or check stream URL.");
+      }
+    }
+
+    heroPlayBtn.addEventListener("click", togglePlay);
+    if (cardPlayBtn) cardPlayBtn.addEventListener("click", togglePlay);
+    mainPlayBtn.addEventListener("click", togglePlay);
+
+    document.querySelectorAll(".listenLiveBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("player").scrollIntoView({ behavior: "smooth", block: "start" });
+        togglePlay();
+      });
+    });
+
+    document.querySelectorAll(".streamBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        setStream(btn.getAttribute("data-stream"));
+        // keep playing after switching
+        if (!audio.paused) audio.play().catch(() => { });
+      });
+    });
+
+    // Volume
+    const volume = document.getElementById("volume");
+    const volPct = document.getElementById("volPct");
+    audio.volume = parseFloat(volume.value);
+    volume.addEventListener("input", () => {
+      audio.volume = parseFloat(volume.value);
+      volPct.textContent = Math.round(audio.volume * 100) + "%";
+      if (audio.muted && audio.volume > 0) {
+        audio.muted = false;
+        isMuted = false;
+        syncMuteUI();
+      }
+    });
+
+    // Mute
+    const muteBtn = document.getElementById("muteBtn");
+    const muteIcon = document.getElementById("muteIcon");
+    function syncMuteUI() {
+      muteIcon.className = isMuted ? "bi bi-volume-mute-fill" : "bi bi-volume-up";
+      muteBtn.innerHTML = isMuted
+        ? '<i id="muteIcon" class="bi bi-volume-mute-fill"></i> Muted'
+        : '<i id="muteIcon" class="bi bi-volume-up"></i> Mute';
+    }
+    muteBtn.addEventListener("click", () => {
+      isMuted = !isMuted;
+      audio.muted = isMuted;
+      syncMuteUI();
+    });
+
+    // Favorite (UI only)
+    const favoriteBtn = document.getElementById("favoriteBtn");
+    const favoriteIcon = document.getElementById("favoriteIcon");
+    let favorited = false;
+    favoriteBtn.addEventListener("click", () => {
+      favorited = !favorited;
+      favoriteIcon.className = favorited ? "bi bi-heart-fill text-gold text-lg" : "bi bi-heart text-ink-muted text-lg";
+      showToast(favorited ? "Saved to favorites (demo)." : "Removed from favorites (demo).");
+    });
+
+    // Copy share link
+    const toast = document.getElementById("toast");
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.remove("hidden");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.add("hidden"), 2200);
+    }
+
+    document.getElementById("copyLinkBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        showToast("Copied to clipboard");
+      } catch (e) {
+        showToast("Copy failed—select and copy URL manually.");
+      }
+    });
+
+    // Share
+    document.getElementById("shareBtn").addEventListener("click", async () => {
+      const shareData = {
+        title: "NexGen Gospel Radio",
+        text: "Tune in live — NexGen Gospel Radio",
+        url: window.location.href
+      };
+      if (navigator.share) {
+        try { await navigator.share(shareData); } catch (e) { }
+      } else {
+        try { await navigator.clipboard.writeText(window.location.href); showToast("Link copied for sharing"); }
+        catch (e) { showToast("Sharing unavailable"); }
+      }
+    });
+
+    // Open in app (opens stream URL)
+    function getStreamUrl() {
+      return STREAMS[currentStreamKey].url || "";
+    }
+    function openStreamUrl() {
+      const url = getStreamUrl();
+      if (!url) {
+        showToast("Add your stream URL to enable this.");
+        return;
+      }
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+    if (document.getElementById("openInAppBtn")) document.getElementById("openInAppBtn").addEventListener("click", openStreamUrl);
+    if (document.getElementById("openAppBtnHero")) document.getElementById("openAppBtnHero").addEventListener("click", openStreamUrl);
+
+    // Donate demo
+    let selectedAmt = null;
+    document.querySelectorAll(".donateAmt").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".donateAmt").forEach(b => {
+          b.classList.remove("bg-gold", "text-ink-text", "gold-glow");
+          b.classList.add("bg-ink-deep", "text-ink-text");
+        });
+        btn.classList.remove("bg-ink-deep", "text-ink-text");
+        btn.classList.add("bg-gold", "text-ink-text", "gold-glow");
+        selectedAmt = parseInt(btn.getAttribute("data-amt"), 10);
+        document.getElementById("customAmt").value = "";
+      });
+    });
+
+    document.getElementById("donateBtn").addEventListener("click", () => {
+      const custom = parseFloat(document.getElementById("customAmt").value || "");
+      const amt = custom || selectedAmt;
+      if (!amt || amt <= 0) {
+        showToast("Select or enter an amount first.");
+        return;
+      }
+      document.getElementById("donateNote").classList.remove("hidden");
+      setTimeout(() => document.getElementById("donateNote").classList.add("hidden"), 3200);
+    });
+
+    // Newsletter demo
+    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("newsletterThanks").classList.remove("hidden");
+      e.target.reset();
+      setTimeout(() => document.getElementById("newsletterThanks").classList.add("hidden"), 4500);
+    });
+
+    // Reminders (ICS download)
+    function downloadICS(title, startText) {
+      const now = new Date();
+      const start = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+      start.setHours(9, 0, 0, 0);
+      const end = new Date(start.getTime() + 60 * 60 * 1000);
+
+      const pad = n => String(n).padStart(2, "0");
+      const fmt = d => (
+        d.getUTCFullYear() +
+        pad(d.getUTCMonth() + 1) +
+        pad(d.getUTCDate()) + "T" +
+        pad(d.getUTCHours()) +
+        pad(d.getUTCMinutes()) +
+        pad(d.getUTCSeconds()) + "Z"
+      );
+
+      const ics = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//NexGen Gospel Radio//Schedule//EN",
+        "BEGIN:VEVENT",
+        "UID:" + cryptoRandomUID(),
+        "DTSTAMP:" + fmt(new Date()),
+        "DTSTART:" + fmt(start),
+        "DTEND:" + fmt(end),
+        "SUMMARY:" + escapeICS(title + " — NexGen Gospel Radio"),
+        "DESCRIPTION:" + escapeICS("Tune in live. (" + startText + ")"),
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = title.replace(/\s+/g, "-").toLowerCase() + ".ics";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(a.href);
+    }
+
+    function escapeICS(str) {
+      return String(str).replace(/\\/g, "\\\\").replace(/\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;");
+    }
+
+    function cryptoRandomUID() {
+      if (window.crypto && crypto.getRandomValues) {
+        const arr = new Uint32Array(4);
+        crypto.getRandomValues(arr);
+        return Array.from(arr).map(n => n.toString(16)).join("-");
+      }
+      return "uid-" + Math.random().toString(16).slice(2);
+    }
+
+    document.querySelectorAll(".reminderBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        downloadICS(btn.getAttribute("data-show"), btn.getAttribute("data-time"));
+        showToast("Reminder file downloaded (.ics)");
+      });
+    });
+
+    // Modals
+    const modalOverlay = document.getElementById("modalOverlay");
+    const closeModal = document.getElementById("closeModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalKicker = document.getElementById("modalKicker");
+    const modalBody = document.getElementById("modalBody");
+
+    const modalTemplates = {
+      songModal: {
+        kicker: "Requests",
+        title: "Request a Song",
+        body: `
+          <form id="songForm" class="grid gap-4 transition-colors">
+            <div class="grid md:grid-cols-2 gap-4 transition-colors">
+              <div>
+                <label class="text-micro text-ink-muted transition-colors">Your name</label>
+                <input required class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Optional on-air name" />
+              </div>
+              <div>
+                <label class="text-micro text-ink-muted transition-colors">Location</label>
+                <input class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="City, State" />
+              </div>
+            </div>
+            <div>
+              <label class="text-micro text-ink-muted transition-colors">Song request</label>
+              <input required class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Artist — Song title" />
+            </div>
+            <div>
+              <label class="text-micro text-ink-muted transition-colors">Message (optional)</label>
+              <textarea class="mt-2 min-h-[120px] w-full rounded-2xl bg-ink-deep hairline px-4 py-3 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Who is this for? Any shout-out?"></textarea>
+            </div>
+            <button class="btn-press inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-4 bg-sky-500 text-white font-semibold hover:bg-sky-600 sky-glow transition-colors">
+              <i class="bi bi-send"></i> Submit request
+            </button>
+            <div class="text-xs text-ink-muted/50 transition-colors">Demo form — connect to your backend or email service.</div>
+          </form>
+        `
+      },
+      prayerModal: {
+        kicker: "Prayer",
+        title: "Submit a Prayer",
+        body: `
+          <form id="prayerForm" class="grid gap-4 transition-colors">
+            <div class="grid md:grid-cols-2 gap-4 transition-colors">
+              <div>
+                <label class="text-micro text-ink-muted transition-colors">Name</label>
+                <input class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Optional" />
+              </div>
+              <div class="flex items-end gap-3 rounded-2xl bg-ink-deep hairline px-4 py-3 transition-colors">
+                <input id="anonymous" type="checkbox" class="h-4 w-4 accent-[var(--gold)]" />
+                <label for="anonymous" class="text-sm text-ink-muted transition-colors">Keep this anonymous</label>
+              </div>
+            </div>
+            <div>
+              <label class="text-micro text-ink-muted transition-colors">Prayer request</label>
+              <textarea required class="mt-2 min-h-[140px] w-full rounded-2xl bg-ink-deep hairline px-4 py-3 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Share what you’d like us to pray for..."></textarea>
+            </div>
+            <button class="btn-press inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-4 bg-sky-500 text-white font-semibold hover:bg-sky-600 sky-glow transition-colors">
+              <i class="bi bi-heart-pulse"></i> Send prayer
+            </button>
+            <div class="text-xs text-ink-muted/50 transition-colors">Demo form — connect to your backend or email service.</div>
+          </form>
+        `
+      },
+      partnerModal: {
+        kicker: "Partner",
+        title: "Advertise / Partner",
+        body: `
+          <form id="partnerForm" class="grid gap-4 transition-colors">
+            <div class="grid md:grid-cols-2 gap-4 transition-colors">
+              <div>
+                <label class="text-micro text-ink-muted transition-colors">Organization</label>
+                <input required class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Business / church / nonprofit" />
+              </div>
+              <div>
+                <label class="text-micro text-ink-muted transition-colors">Contact email</label>
+                <input type="email" required class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="name@domain.com" />
+              </div>
+            </div>
+            <div>
+              <label class="text-micro text-ink-muted transition-colors">What are you interested in?</label>
+              <select class="mt-2 h-12 w-full rounded-2xl bg-ink-deep hairline px-4 text-ink-text outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors">
+                <option class="bg-ink-deep text-ink-text">Sponsorship</option>
+                <option class="bg-ink-deep text-ink-text">On-air ads</option>
+                <option class="bg-ink-deep text-ink-text">Event partnership</option>
+                <option class="bg-ink-deep text-ink-text">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-micro text-ink-muted transition-colors">Message</label>
+              <textarea class="mt-2 min-h-[120px] w-full rounded-2xl bg-ink-deep hairline px-4 py-3 text-ink-text placeholder:text-ink-muted outline-none focus:ring-2 focus:ring-sky-500/40 transition-colors" placeholder="Tell us what you’re planning and your timeline."></textarea>
+            </div>
+            <button class="btn-press inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-4 bg-ink-deep hover:bg-glass hairline text-ink-text font-semibold transition-colors">
+              <i class="bi bi-envelope"></i> Send inquiry
+            </button>
+            <div class="text-xs text-ink-muted/50 transition-colors">Demo form — connect to your backend or CRM.</div>
+          </form>
+        `
+      }
+    };
+
+    function openModal(key) {
+      const t = modalTemplates[key];
+      if (!t) return;
+      modalKicker.textContent = t.kicker;
+      modalTitle.textContent = t.title;
+      modalBody.innerHTML = t.body;
+      modalOverlay.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModalFn() {
+      modalOverlay.classList.add("hidden");
+      document.body.style.overflow = "";
+      modalBody.innerHTML = "";
+    }
+
+    document.querySelectorAll(".openModal").forEach(btn => {
+      btn.addEventListener("click", () => openModal(btn.getAttribute("data-modal")));
+    });
+    closeModal.addEventListener("click", closeModalFn);
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) closeModalFn();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modalOverlay.classList.contains("hidden")) closeModalFn();
+    });
+
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    mobileMenu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+
+    // Open player CTA
+    openPlayerBtn.addEventListener("click", () => {
+      document.getElementById("player").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    // Basic "listeners" shimmer (demo)
+    const statListeners = document.getElementById("statListeners");
+    setInterval(() => {
+      const base = 1284;
+      const wobble = Math.floor(Math.random() * 60) - 25;
+      statListeners.textContent = (base + wobble).toLocaleString();
+    }, 2200);
+
+    // Set year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Init stream selection
+    setStream(currentStreamKey);
+
+    // Autoplay
+    togglePlay().catch(() => { });
+
+    // Keep UI in sync if playback ends/errors
+    audio.addEventListener("pause", () => updatePlayUI(false));
+    audio.addEventListener("play", () => updatePlayUI(true));
+    audio.addEventListener("error", () => showToast("Stream error—check your URL and format."));
+  </script>
+  <chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar>
+</body>
+
+</html>
